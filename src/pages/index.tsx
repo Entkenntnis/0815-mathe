@@ -46,16 +46,15 @@ function HomePage() {
         <title>MatheLingo</title>
       </Head>
       <div>
-        <div className="w-[580px] mx-auto">
-          <div className="mt-8 border rounded p-3">
-            Hallo, schön dass du hergefunden hast!. Bei Mathelingo kannst du
-            dich auf entspannte Art mit mathematischen Denken beschäftigen.
-            Dabei spielt auch Sprache eine große Rolle, denn Mathematik ist
-            nicht nur Rechnen, sondern auch eine Art, miteinander zu
-            kommunizieren.
+        <div className="max-w-[580px] mx-auto">
+          <div className="mt-8 rounded p-3">
+            Hallo, schön dass du hergefunden hast! Bei Mathelingo kannst du dich
+            auf entspannte Art mit mathematischen Denken beschäftigen. Dabei
+            spielt auch Sprache eine große Rolle, denn Mathematik ist nicht nur
+            Rechnen, sondern auch eine Art, miteinander zu kommunizieren.
             <br />
             <br />
-            Das Prinzip der Aufgaben ist schlicht Hier steht die Angabe mit der
+            Das Prinzip der Aufgaben ist schlicht. Hier steht die Angabe mit der
             Fragestellung. Unterhalb gibt es Platz für deine Antwort. Unten
             findest du einen Bereich mit möglichen Antwortbausteinen. Suche dir
             die geeigneten Bausteine aus und schreibe deine Antwort. Es gibt
@@ -67,36 +66,45 @@ function HomePage() {
             ersten Haltestelle steigen 30 Personen ein, an der zweiten
             Haltestelle steigen 12 Personen aus. Wie alt ist der Busfahrer?
           </div>
-          <div className="mt-5 border rounded p-3 pb-6">
+          <div className="mt-5 border-b-2 border-t-2 mx-3 mb-6">
+            {selected.length == 0 && (
+              <span className="inline-block italic my-2 py-0.5 border border-white text-gray-300 select-none">
+                Klicke auf die Wörter um deine Antwort zu schreiben.
+              </span>
+            )}
             {selected.map((word) => (
               <span
                 className={clsx(
-                  'inline-block px-2 py-0.5 border bg-gray-200 rounded',
-                  'mr-3 mt-3 select-none cursor-pointer'
+                  'inline-block px-3 py-1 border bg-gray-200 rounded',
+                  'mr-3 my-2 select-none cursor-pointer'
                 )}
                 key={word}
                 onClick={() => {
-                  if (state !== 'input') return
+                  if (state == 'right') return
                   setSelected((val) => val.filter((x) => x !== word))
+                  setState('input')
                 }}
               >
                 {word}
               </span>
             ))}
           </div>
-          <div className="mt-5 border rounded p-3 pb-6">
+          <div className="rounded px-3 pb-6">
             {wordRack.map((word) => (
               <span
                 className={clsx(
-                  'inline-block px-2 py-0.5 border bg-gray-200 rounded',
+                  'inline-block px-3 py-1 border-2 bg-gray-200 rounded',
                   'mr-3 mt-3 select-none',
-                  selected.includes(word) ? 'text-gray-400' : 'cursor-pointer'
+                  selected.includes(word)
+                    ? 'text-white bg-white border'
+                    : 'cursor-pointer'
                 )}
                 key={word}
                 onClick={() => {
                   if (selected.includes(word)) return
-                  if (state !== 'input') return
+                  if (state == 'right') return
                   setSelected((val) => [...val, word])
+                  setState('input')
                 }}
               >
                 {word}
@@ -105,7 +113,7 @@ function HomePage() {
           </div>
 
           {state == 'input' && (
-            <div className="mt-4 flex justify-end">
+            <div className="mt-4 flex justify-end mx-3 border p-3">
               <div>
                 <button
                   className="px-2 py-0.5 bg-green-300 rounded"
@@ -124,21 +132,12 @@ function HomePage() {
             </div>
           )}
           {state == 'wrong' && (
-            <div className="mt-4 flex justify-between">
-              <p>Antwort ist falsch.</p>
-              <button
-                className="px-2 py-0.5 bg-blue-200 rounded"
-                onClick={() => {
-                  setSelected([])
-                  setState('input')
-                }}
-              >
-                Erneut probieren
-              </button>
+            <div className="mt-4 flex justify-between mx-3 border p-3 bg-red-200">
+              <p>Antwort ist falsch. Probiere weiter.</p>
             </div>
           )}
           {state == 'right' && (
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4 flex justify-between mx-3 border p-3 bg-green-100">
               <p>Richtig!</p>
               <button
                 className="px-2 py-0.5 bg-green-300 rounded"
@@ -150,6 +149,7 @@ function HomePage() {
               </button>
             </div>
           )}
+          <div className="h-6"></div>
         </div>
       </div>
     </>
