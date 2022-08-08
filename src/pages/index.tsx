@@ -1,6 +1,8 @@
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
+import { FaIcon } from '../components/FaIcon'
 
 import { shuffleArray } from '../lib/shuffleArray'
 
@@ -16,8 +18,6 @@ const words = [
   'Bus',
   'befinden',
   'sich',
-  '30',
-  '12',
   'Personen',
   '42',
 ]
@@ -46,8 +46,15 @@ function HomePage() {
         <title>MatheLingo</title>
       </Head>
       <div>
-        <div className="max-w-[580px] mx-auto">
-          <div className="mt-8 rounded p-3">
+        <div className="max-w-[580px] mx-auto relative">
+          <div className="absolute right-3 top-1">
+            <FaIcon
+              icon={faTimes}
+              className="h-7 w-7 cursor-pointer rounded-full bg-gray-50 p-1 text-gray-400"
+            />
+          </div>
+          <h1 className="mt-4 text-2xl font-bold mx-3">Start</h1>
+          <div className="rounded p-3">
             Hallo, schön dass du hergefunden hast! Bei Mathelingo kannst du dich
             auf entspannte Art mit mathematischen Denken beschäftigen. Dabei
             spielt auch Sprache eine große Rolle, denn Mathematik ist nicht nur
@@ -68,7 +75,7 @@ function HomePage() {
           </div>
           <div className="mt-5 border-b-2 border-t-2 mx-3 mb-6">
             {selected.length == 0 && (
-              <span className="inline-block italic my-2 py-0.5 border border-white text-gray-300 select-none">
+              <span className="inline-block italic my-2 py-1 border border-white text-gray-300 select-none">
                 Klicke auf die Wörter um deine Antwort zu schreiben.
               </span>
             )}
