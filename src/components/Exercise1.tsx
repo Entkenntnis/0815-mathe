@@ -7,8 +7,8 @@ import { FaIcon } from '../components/FaIcon'
 import { shuffleArray } from '../lib/shuffleArray'
 
 const words = [
-  'Der',
-  'Busfahrer',
+  'Die',
+  'Busfahrerin',
   'ist',
   '32',
   'Jahre',
@@ -23,11 +23,11 @@ const words = [
 ]
 
 const answers = [
-  'Der Busfahrer ist 32 Jahre alt',
-  'Busfahrer ist 32 Jahre alt',
-  'Der Busfahrer ist 32 Jahre',
-  'Busfahrer 32 Jahre',
-  'Busfahrer ist 32 Jahre',
+  'Die Busfahrerin ist 32 Jahre alt',
+  'Busfahrerin ist 32 Jahre alt',
+  'Die Busfahrerin ist 32 Jahre',
+  'Busfahrerin 32 Jahre',
+  'Busfahrerin ist 32 Jahre',
 ]
 
 interface Exercise1Props {
@@ -52,7 +52,7 @@ export function Exercise1({ onClose }: Exercise1Props) {
       <div>
         <div className="max-w-[580px] mx-auto relative">
           <div
-            className="absolute right-3 top-1"
+            className="absolute right-3 top-1.5"
             onClick={() => {
               onClose(state == 'right')
             }}
@@ -62,25 +62,26 @@ export function Exercise1({ onClose }: Exercise1Props) {
               className="h-7 w-7 cursor-pointer rounded-full bg-gray-50 p-1 text-gray-400"
             />
           </div>
-          <h1 className="mt-4 text-2xl font-bold mx-3">Start</h1>
-          <div className="rounded p-3">
-            Hallo, schön dass du hergefunden hast! Bei Mathelingo kannst du dich
-            auf entspannte Art mit mathematischen Denken beschäftigen. Dabei
-            spielt auch Sprache eine große Rolle, denn Mathematik ist nicht nur
-            Rechnen, sondern auch eine Art, miteinander zu kommunizieren.
+          <h1 className="mt-5 text-2xl font-bold mx-3">Start</h1>
+          <div className="rounded p-3 mt-4">
+            Herzlich Willkommen bei MatheLingo!
             <br />
             <br />
-            Das Prinzip der Aufgaben ist schlicht. Hier steht die Angabe mit der
-            Fragestellung. Unterhalb gibt es Platz für deine Antwort. Unten
-            findest du einen Bereich mit möglichen Antwortbausteinen. Suche dir
-            die geeigneten Bausteine aus und schreibe deine Antwort. Es gibt
-            häufig mehr als eine richtige Antwortmöglichkeit. Die
-            Aufgabenstellung lautet:
+            Mathematik und Sprache - zwei ganz unterschiedliche Dinge, die doch
+            viel gemeinsam haben. Denn um Mathematik zu betreiben, muss man viel
+            miteinander reden und um sich in einer Sprache präzise ausdrücken zu
+            können, hilft ein wenig Kenntnis von der Mathematik.
             <br />
             <br />
-            Ein 32-jähriger Busfahrer startet mit einem leeren Bus. An der
+            Auf MatheLingo findest du unterschiedlichste Aufgaben, die mal mehr
+            mit Mathe und mal mehr mit Sprache zu tun haben. Deine Antwort
+            schreibst du mit den gegebenen Textbausteinen. Es geht gleich mit
+            der ersten Aufgabe los:
+            <br />
+            <br />
+            Ein 32-jährige Busfahrerin startet mit einem leeren Bus. An der
             ersten Haltestelle steigen 30 Personen ein, an der zweiten
-            Haltestelle steigen 12 Personen aus. Wie alt ist der Busfahrer?
+            Haltestelle steigen 12 Personen aus. Wie alt ist die Busfahrerin?
           </div>
           <div className="mt-5 border-b-2 border-t-2 mx-3 mb-6">
             {selected.length == 0 && (
