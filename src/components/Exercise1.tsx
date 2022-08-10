@@ -52,14 +52,14 @@ export function Exercise1({ onClose }: Exercise1Props) {
       <div>
         <div className="max-w-[580px] mx-auto relative">
           <div
-            className="absolute right-3 top-1.5"
+            className="absolute right-3 top-1.5 "
             onClick={() => {
               onClose(state == 'right')
             }}
           >
             <FaIcon
               icon={faTimes}
-              className="h-7 w-7 cursor-pointer rounded-full bg-gray-50 p-1 text-gray-400"
+              className="!h-7 w-7 cursor-pointer rounded-full bg-gray-50 p-1 text-gray-400"
             />
           </div>
           <h1 className="mt-5 text-2xl font-bold mx-3">Start</h1>
@@ -130,7 +130,7 @@ export function Exercise1({ onClose }: Exercise1Props) {
           </div>
 
           {state == 'input' && (
-            <div className="mt-4 flex justify-end mx-3 border p-3">
+            <div className="mt-4 flex justify-end mx-3 border p-3 rounded">
               <div>
                 <button
                   className="px-2 py-0.5 bg-green-300 rounded"
@@ -149,12 +149,12 @@ export function Exercise1({ onClose }: Exercise1Props) {
             </div>
           )}
           {state == 'wrong' && (
-            <div className="mt-4 flex justify-between mx-3 border p-3 bg-red-200">
+            <div className="mt-4 flex justify-between mx-3 border p-3 bg-red-200 rounded">
               <p>Antwort ist falsch. Probiere weiter.</p>
             </div>
           )}
           {state == 'right' && (
-            <div className="mt-4 flex justify-between mx-3 border p-3 bg-green-100">
+            <div className="mt-4 flex justify-between mx-3 border p-3 bg-green-100 rounded">
               <p>Richtig!</p>
               <button
                 className="px-2 py-0.5 bg-green-300 rounded"
