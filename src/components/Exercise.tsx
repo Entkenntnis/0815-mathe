@@ -2,37 +2,18 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import { FaIcon } from '../components/FaIcon'
 
+import { FaIcon } from '../components/FaIcon'
+import { exercisesData } from '../data/exercises'
 import { shuffleArray } from '../lib/shuffleArray'
 
-const words = [
-  'Muster',
-  'A',
-  'enthält',
-  'kein',
-  'blau',
-  'B',
-  'gelb',
-  'C',
-  'keine',
-  'Fünfecke',
-  'D',
-  'Lücken',
-]
-
-const answers = [
-  'Muster A enthält kein gelb',
-  'Muster B enthält kein blau',
-  'Muster C enthält keine Fünfecke',
-  'Muster D enthält Lücken',
-]
-
-interface Exercise2Props {
+interface ExerciseProps {
   onClose: (done: boolean) => void
+  id: number
 }
 
-export function Exercise2({ onClose }: Exercise2Props) {
+export function Exercise({ onClose, id }: ExerciseProps) {
+  const data = exercisesData.find((x) => x.id == id)
   const [wordRack, setWordRack] = useState<string[]>([])
 
   const [selected, setSelected] = useState<string[]>([])
@@ -40,8 +21,8 @@ export function Exercise2({ onClose }: Exercise2Props) {
   const [state, setState] = useState<'input' | 'right' | 'wrong'>('input')
 
   useEffect(() => {
-    setWordRack(shuffleArray(words))
-  }, [])
+    setWordRack(shuffleArray(data.words))
+  }, [data])
   return (
     <>
       <Head>
@@ -60,20 +41,8 @@ export function Exercise2({ onClose }: Exercise2Props) {
               className="!h-7 w-7 cursor-pointer rounded-full bg-gray-50 p-1 text-gray-400"
             />
           </div>
-          <h1 className="mt-5 text-2xl font-bold mx-3">
-            Was gehört nicht dazu?
-          </h1>
-          <div className="rounded p-3 mt-4">
-            In der Mathematik gibt es Aufgaben, bei denen alle Antworten richtig
-            sind - solange man sie begründen kann. So auch hier. Betrachte
-            folgende vier Muster:
-            <img
-              src="/6.1.A1.Image.2-4.png"
-              className="h-[300px] my-5 mx-auto"
-              alt="vier muster"
-            />
-            Wähle ein Muster und begründe, warum es nicht dazu gehört.
-          </div>
+          <h1 className="mt-5 text-2xl font-bold mx-3">{data.title}</h1>
+          <div className="rounded p-3 mt-4">{data.text}</div>
           <div className="mt-5 border-b-2 border-t-2 mx-3 mb-6">
             {selected.length == 0 && (
               <span className="inline-block italic my-2 py-1 border border-white text-gray-300 select-none">
@@ -127,7 +96,7 @@ export function Exercise2({ onClose }: Exercise2Props) {
                   className="px-2 py-0.5 bg-green-300 rounded"
                   onClick={() => {
                     const sentence = selected.join(' ')
-                    if (answers.includes(sentence)) {
+                    if (data.solutions.includes(sentence)) {
                       setState('right')
                     } else {
                       setState('wrong')
