@@ -26,16 +26,19 @@ export default function Main() {
   return (
     <>
       <Head>
-        <title>MatheLingo</title>
+        <title>0815 Mathe</title>
       </Head>
       <div>
         <div className="max-w-[580px] mx-auto relative">
-          <h1 className="my-10 text-3xl font-bold mx-3">MatheLingo</h1>
+          <h1 className="mt-10 mb-4 text-3xl font-bold mx-3">0815 Mathe</h1>
+          <p className="italic mx-3">
+            Aus dem Tagebuch einer Mathematik-Lehrkraft
+          </p>
           {exercisesData.map((exercise) => (
             <div
               key={exercise.id}
               className={clsx(
-                'mx-3 border  rounded p-2 cursor-pointer mt-5',
+                'mx-3 border  rounded p-2 cursor-pointer mt-8',
                 doneExercises.includes(exercise.id)
                   ? 'border-gray-300'
                   : 'border-blue-800 hover:bg-blue-50'
@@ -46,7 +49,7 @@ export default function Main() {
             >
               <h2 className="text-lg mb-2 underline">{exercise.title}</h2>
               <p className="whitespace-nowrap text-ellipsis overflow-hidden text-gray-400 italic">
-                {exercise.previewText}
+                {exercise.date}
               </p>
             </div>
           ))}
