@@ -104,7 +104,12 @@ export function Exercise({ onClose, id }: ExerciseProps) {
             </>
           )}
 
-          <div className="mt-3 flex justify-end mx-3">
+          <div
+            className={clsx(
+              'flex justify-end mx-3',
+              state == 'right' ? 'mt-6' : 'mt-3'
+            )}
+          >
             <div>
               <button
                 className="px-2 py-0.5 bg-green-300 rounded"
@@ -115,7 +120,7 @@ export function Exercise({ onClose, id }: ExerciseProps) {
                   }
 
                   const sentence = selected.join(' ')
-                  setSubmittedText(sentence)
+                  setSubmittedText(sentence + '.')
                   if (data.solutions.includes(sentence)) {
                     setState('right')
                   } else {

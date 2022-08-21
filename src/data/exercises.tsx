@@ -66,7 +66,7 @@ export const exercisesData: ExerciseData[] = [
       'Personen',
       '42',
     ],
-    solutions: ['Die Busfahrerin ist 32 Jahre alt.'],
+    solutions: ['Die Busfahrerin ist 32 Jahre alt'],
     text: (
       <>
         <p>
