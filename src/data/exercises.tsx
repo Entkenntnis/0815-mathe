@@ -4,7 +4,8 @@ interface ExerciseData {
   words: string[]
   solutions: string[]
   text: JSX.Element
-  date: string
+  dateText: string
+  date: number
 }
 
 export const exercisesData: ExerciseData[] = [
@@ -44,7 +45,8 @@ export const exercisesData: ExerciseData[] = [
         Wähle ein Muster und begründe, warum es nicht dazu gehört.
       </>
     ),
-    date: 'Freitag, 16. September',
+    dateText: 'Freitag, 16. September',
+    date: 20220916,
   },
   {
     id: 1,
@@ -86,6 +88,7 @@ export const exercisesData: ExerciseData[] = [
         12 Personen aus. Wie alt ist die Busfahrerin?
       </>
     ),
-    date: 'Mittwoch, 14. September',
+    dateText: 'Mittwoch, 14. September',
+    date: 20220914,
   },
 ]

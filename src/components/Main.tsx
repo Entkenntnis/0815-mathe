@@ -23,6 +23,11 @@ export default function Main() {
     )
   }
 
+  const exDate = exercisesData.slice(0)
+  exDate.sort((a, b) => a.date - b.date)
+  const toShow = exDate.slice(0, doneExercises.length + 1)
+  toShow.reverse()
+
   return (
     <>
       <Head>
@@ -34,7 +39,7 @@ export default function Main() {
           <p className="italic mx-3">
             Aus dem Tagebuch einer Mathematik-Lehrkraft
           </p>
-          {exercisesData.map((exercise) => (
+          {toShow.map((exercise) => (
             <div
               key={exercise.id}
               className={clsx(
@@ -49,7 +54,7 @@ export default function Main() {
             >
               <h2 className="text-lg mb-2 underline">{exercise.title}</h2>
               <p className="whitespace-nowrap text-ellipsis overflow-hidden text-gray-400 italic">
-                {exercise.date}
+                {exercise.dateText}
               </p>
             </div>
           ))}
