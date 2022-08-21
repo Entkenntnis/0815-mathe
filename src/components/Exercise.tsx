@@ -45,7 +45,9 @@ export function Exercise({ onClose, id }: ExerciseProps) {
           </div>
           <h1 className="mt-5 text-2xl font-bold mx-3">{data.title}</h1>
           <p className="mx-3 mt-3 text-gray-500 text-sm">{data.dateText}</p>
-          <div className="mx-3 mt-6 [&>p]:my-4">{data.text}</div>
+          <div className="mx-3 mt-6 [&>p]:my-4 [&>img]:mx-auto [&>img]:my-4">
+            {data.text}
+          </div>
           {state !== 'input' && (
             <div
               className={clsx(
@@ -74,7 +76,6 @@ export function Exercise({ onClose, id }: ExerciseProps) {
                     key={word}
                     onClick={() => {
                       setSelected((val) => val.filter((x) => x !== word))
-                      //setState('input')
                     }}
                   >
                     {word}
@@ -132,24 +133,6 @@ export function Exercise({ onClose, id }: ExerciseProps) {
               </button>
             </div>
           </div>
-          {/*state == 'wrong' && (
-            <div className="mt-4 flex justify-between mx-3 border p-3 bg-red-200 rounded">
-              <p>Antwort ist falsch. Probiere weiter.</p>
-            </div>
-          )*/}
-          {/*state == 'right' && (
-            <div className="mt-4 flex justify-between mx-3 border p-3 bg-green-100 rounded">
-              <p>Richtig!</p>
-              <button
-                className="px-2 py-0.5 bg-green-300 rounded"
-                onClick={() => {
-                  onClose(true)
-                }}
-              >
-                Weiter
-              </button>
-            </div>
-              )*/}
           <div className="h-6"></div>
         </div>
       </div>

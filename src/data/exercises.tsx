@@ -34,15 +34,21 @@ export const exercisesData: ExerciseData[] = [
     ],
     text: (
       <>
-        In der Mathematik gibt es Aufgaben, bei denen alle Antworten richtig
-        sind - solange man sie begründen kann. So auch hier. Betrachte folgende
-        vier Muster:
+        <p>
+          Ich habe heute der Klasse dieses Bild gezeigt und gefragt: Welches
+          Muster gehört nicht dazu? Begründe deine Antwort.
+        </p>
         <img
           src="/6.1.A1.Image.2-4.png"
-          className="h-[300px] my-5 mx-auto"
+          className="h-[300px]"
           alt="vier muster"
         />
-        Wähle ein Muster und begründe, warum es nicht dazu gehört.
+        <p>
+          Kein einziger hat Muster D gewählt! Obwohl das für die
+          Unterrichtsstunde eigentlich die wichtige Antwort wäre. Und das
+          traurig: Sie hatten dafür auch gute Gründe nennen können. Was denkst
+          du welches Muster nicht dazu passt?
+        </p>
       </>
     ),
     dateText: 'Freitag, 16. September',
