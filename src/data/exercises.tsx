@@ -66,13 +66,7 @@ export const exercisesData: ExerciseData[] = [
       'Personen',
       '42',
     ],
-    solutions: [
-      'Die Busfahrerin ist 32 Jahre alt',
-      'Busfahrerin ist 32 Jahre alt',
-      'Die Busfahrerin ist 32 Jahre',
-      'Busfahrerin 32 Jahre',
-      'Busfahrerin ist 32 Jahre',
-    ],
+    solutions: ['Die Busfahrerin ist 32 Jahre alt.'],
     text: (
       <>
         <p>
@@ -82,9 +76,9 @@ export const exercisesData: ExerciseData[] = [
         <p>
           Das fängt ja schon mal gut an. Ich sitze seit Stunden an der ersten
           Mathestunde morgen und kann mich einfach nicht konzentrieren. Meine
-          Gedanken schweifen immer wieder zu dieser unsinningen Aufgabe - und
-          die kann ich doch nicht im Unterricht verwenden! Aber irgendwie witzig
-          ist sie schon - mal sehen wie viel das richtig beantworten können:
+          Gedanken schweifen immer wieder zu dieser unsinningen Aufgabe ab, die
+          ich nicht im Unterricht verwenden kann. Aber irgendwie witzig ist sie
+          schon, ich wäre gespannt wie viele das richtig beantworten könnten:
         </p>
         <p>
           Ein 32-jährige Busfahrerin startet mit einem leeren Bus. An der ersten
