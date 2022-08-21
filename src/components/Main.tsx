@@ -53,7 +53,7 @@ export default function Main() {
               }}
             >
               <h2 className="text-lg mb-2 underline">{exercise.title}</h2>
-              <p className="whitespace-nowrap text-ellipsis overflow-hidden text-gray-400 italic">
+              <p className="whitespace-nowrap text-ellipsis overflow-hidden text-gray-400">
                 {exercise.dateText}
               </p>
             </div>

@@ -26,7 +26,7 @@ export function Exercise({ onClose, id }: ExerciseProps) {
   return (
     <>
       <Head>
-        <title>MatheLingo</title>
+        <title>0815 Mathe - {data.title}</title>
       </Head>
       <div>
         <div className="max-w-[580px] mx-auto relative">
@@ -42,7 +42,8 @@ export function Exercise({ onClose, id }: ExerciseProps) {
             />
           </div>
           <h1 className="mt-5 text-2xl font-bold mx-3">{data.title}</h1>
-          <div className="rounded p-3 mt-4">{data.text}</div>
+          <p className="mx-3 mt-3 text-gray-500 text-sm">{data.dateText}</p>
+          <div className="mx-3 mt-6 [&>p]:my-4">{data.text}</div>
           <div className="mt-5 border-b-2 border-t-2 mx-3 mb-6">
             {selected.length == 0 && (
               <span className="inline-block italic my-2 py-1 border border-white text-gray-300 select-none">

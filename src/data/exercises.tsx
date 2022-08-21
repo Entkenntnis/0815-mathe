@@ -75,17 +75,22 @@ export const exercisesData: ExerciseData[] = [
     ],
     text: (
       <>
-        Dienstag, 13. September:
-        <br />
-        <br />
-        I give up. Mir fällt einfach keine sinnvolle Aufgabe mehr ein für meine
-        nächste Unterrichtsstunde. Das einzige, woran ich noch denken kann ist
-        diese Textaufgabe:
-        <br />
-        <br />
-        Ein 32-jährige Busfahrerin startet mit einem leeren Bus. An der ersten
-        Haltestelle steigen 30 Personen ein, an der zweiten Haltestelle steigen
-        12 Personen aus. Wie alt ist die Busfahrerin?
+        <p>
+          Wieder ein neues Schuljahr - und wieder ein ganzes Jahr lang sinnvolle
+          Aufgaben für den Unterricht ausdenken, arrrg.
+        </p>
+        <p>
+          Das fängt ja schon mal gut an. Ich sitze seit Stunden an der ersten
+          Mathestunde morgen und kann mich einfach nicht konzentrieren. Meine
+          Gedanken schweifen immer wieder zu dieser unsinningen Aufgabe - und
+          die kann ich doch nicht im Unterricht verwenden! Aber irgendwie witzig
+          ist sie schon - mal sehen wie viel das richtig beantworten können:
+        </p>
+        <p>
+          Ein 32-jährige Busfahrerin startet mit einem leeren Bus. An der ersten
+          Haltestelle steigen 30 Personen ein, an der zweiten Haltestelle
+          steigen 12 Personen aus. Wie alt ist die Busfahrerin?
+        </p>
       </>
     ),
     dateText: 'Mittwoch, 14. September',
