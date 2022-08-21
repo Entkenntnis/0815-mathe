@@ -1,2 +1,3 @@
-# Mathe 0815
-welp, just another try, right? 
+# 0815 Mathe
+
+Aus dem Tagebuch einer Mathematik-Lehrkraft
