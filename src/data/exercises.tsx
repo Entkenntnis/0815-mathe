@@ -4,7 +4,7 @@ export interface ExerciseData {
   words: string[]
   solutions: string[]
   text: JSX.Element
-  category: '5. Klasse' | 'Spaß & Co.'
+  category: '6. Klasse' | 'Spaß & Co.'
 }
 
 export const exercisesData: ExerciseData[] = [
@@ -37,6 +37,70 @@ export const exercisesData: ExerciseData[] = [
       </>
     ),
     category: 'Spaß & Co.',
+  },
+  {
+    id: 3,
+    title: 'Endstellenregel',
+    text: (
+      <>
+        <p>
+          Die Zahlen 15, 300, 6125, 71035 und 10000 sind alle durch 5 teilbar.
+        </p>
+        <p>
+          Man kann diese Eigenschaft bereits an der letzten Stelle der Zahl
+          ablesen. Wie lautet die Regel, ob eine Zahl durch 5 teilbar ist?
+        </p>
+        <p>Eine Zahl ist durch 5 teilbar, wenn …</p>
+      </>
+    ),
+    words: [
+      'die',
+      'letzte',
+      'Ziffer',
+      '0',
+      'oder',
+      '5',
+      'ist',
+      'erste',
+      'Zahl',
+      '2',
+    ],
+    solutions: ['die letzte Ziffer 0 oder 5 ist'],
+    category: '6. Klasse',
+  },
+  {
+    id: 4,
+    title: 'Schaltjahre',
+    text: (
+      <>
+        <p>
+          Unser Kalender richtet sich nach der Sonne. Unser Planet braucht
+          365,242199 Tage, um die Sonne zu umkreisen.
+        </p>
+        <p>
+          Welches Problem entsteht, wenn alle Kalenderjahre nur 365 Tage haben?
+        </p>
+      </>
+    ),
+    words: [
+      'Der',
+      'Kalender',
+      'ist',
+      'ungenau',
+      'Die',
+      'Kalenderjahre',
+      'sind',
+      'zu',
+      'kurz',
+      'genau',
+      'lang',
+    ],
+    solutions: [
+      'Der Kalender ist ungenau',
+      'Die Kalenderjahre sind zu kurz',
+      'Die Kalenderjahre sind ungenau',
+    ],
+    category: '6. Klasse',
   },
   {
     id: 2,
@@ -72,6 +136,6 @@ export const exercisesData: ExerciseData[] = [
         <p>Welches Muster passt nicht dazu und warum?</p>
       </>
     ),
-    category: '5. Klasse',
+    category: '6. Klasse',
   },
 ]

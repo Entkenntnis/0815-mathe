@@ -55,9 +55,9 @@ export default function Main() {
           <p className="mx-3">
             Verständnis-orientierte interaktive Mathematik-Aufgaben
           </p>
-          <h2 className="mx-3 mt-10 text-xl font-bold">5. Klasse</h2>
+          <h2 className="mx-3 mt-10 text-xl font-bold">6. Klasse</h2>
           {exercisesData
-            .filter((e) => e.category == '5. Klasse')
+            .filter((e) => e.category == '6. Klasse')
             .map((exercise) => renderExercise(exercise))}
           <h2 className="mx-3 mt-10 text-xl font-bold">Spaß &amp; Co.</h2>
           {exercisesData
