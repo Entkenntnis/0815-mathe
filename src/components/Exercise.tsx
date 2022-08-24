@@ -28,7 +28,7 @@ export function Exercise({ onClose, id }: ExerciseProps) {
   return (
     <>
       <Head>
-        <title>0815 Mathe - {data.title}</title>
+        <title>{data.title} - Reasoning Exercise</title>
       </Head>
       <div>
         <div className="max-w-[580px] mx-auto relative">
@@ -44,7 +44,7 @@ export function Exercise({ onClose, id }: ExerciseProps) {
             />
           </div>
           <h1 className="mt-5 text-2xl font-bold mx-3">{data.title}</h1>
-          <p className="mx-3 mt-3 text-gray-500 text-sm">{data.dateText}</p>
+          <p className="mx-3 mt-3 text-gray-500 text-sm">{data.category}</p>
           <div className="mx-3 mt-6 [&>p]:my-4 [&>img]:mx-auto [&>img]:my-4">
             {data.text}
           </div>

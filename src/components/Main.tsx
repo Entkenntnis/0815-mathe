@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Head from 'next/head'
 import { useState } from 'react'
-import { exercisesData } from '../data/exercises'
+import { ExerciseData, exercisesData } from '../data/exercises'
 
 import { Exercise } from './Exercise'
 
@@ -23,10 +23,24 @@ export default function Main() {
     )
   }
 
-  const exDate = exercisesData.slice(0)
-  exDate.sort((a, b) => a.date - b.date)
-  const toShow = exDate.slice(0, doneExercises.length + 1)
-  toShow.reverse()
+  function renderExercise(exercise: ExerciseData) {
+    return (
+      <div
+        key={exercise.id}
+        className={clsx(
+          'mx-3 border  rounded p-2 cursor-pointer mt-6',
+          doneExercises.includes(exercise.id)
+            ? 'border-gray-300'
+            : 'border-blue-800 hover:bg-blue-50'
+        )}
+        onClick={() => {
+          setActiveExercise(exercise.id)
+        }}
+      >
+        <h3 className="text-lg">{exercise.title}</h3>
+      </div>
+    )
+  }
 
   return (
     <>
@@ -41,25 +55,14 @@ export default function Main() {
           <p className="mx-3">
             Verständnis-orientierte interaktive Mathematik-Aufgaben
           </p>
-          {toShow.map((exercise) => (
-            <div
-              key={exercise.id}
-              className={clsx(
-                'mx-3 border  rounded p-2 cursor-pointer mt-8',
-                doneExercises.includes(exercise.id)
-                  ? 'border-gray-300'
-                  : 'border-blue-800 hover:bg-blue-50'
-              )}
-              onClick={() => {
-                setActiveExercise(exercise.id)
-              }}
-            >
-              <h2 className="text-lg mb-2 underline">{exercise.title}</h2>
-              <p className="whitespace-nowrap text-ellipsis overflow-hidden text-gray-400">
-                {exercise.dateText}
-              </p>
-            </div>
-          ))}
+          <h2 className="mx-3 mt-10 text-xl font-bold">5. Klasse</h2>
+          {exercisesData
+            .filter((e) => e.category == '5. Klasse')
+            .map((exercise) => renderExercise(exercise))}
+          <h2 className="mx-3 mt-10 text-xl font-bold">Spaß &amp; Co.</h2>
+          {exercisesData
+            .filter((e) => e.category == 'Spaß & Co.')
+            .map((exercise) => renderExercise(exercise))}
         </div>
       </div>
     </>
