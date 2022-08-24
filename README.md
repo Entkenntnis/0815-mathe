@@ -1,3 +1,3 @@
-# 0815 Mathe
+# Reasoning Exercises
 
-Aus dem Tagebuch einer Mathematik-Lehrkraft
+Verständnis-orientierte interaktive Mathematik-Aufgaben

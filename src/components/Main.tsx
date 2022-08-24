@@ -31,13 +31,15 @@ export default function Main() {
   return (
     <>
       <Head>
-        <title>0815 Mathe</title>
+        <title>Reasoning Exercises</title>
       </Head>
       <div>
         <div className="max-w-[580px] mx-auto relative">
-          <h1 className="mt-10 mb-4 text-3xl font-bold mx-3">0815 Mathe</h1>
-          <p className="italic mx-3">
-            Aus dem Tagebuch einer Mathematik-Lehrkraft
+          <h1 className="mt-10 mb-4 text-3xl font-bold mx-3">
+            Reasoning Exercises
+          </h1>
+          <p className="mx-3">
+            Verständnis-orientierte interaktive Mathematik-Aufgaben
           </p>
           {toShow.map((exercise) => (
             <div
