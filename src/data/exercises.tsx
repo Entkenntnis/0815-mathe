@@ -138,4 +138,38 @@ export const exercisesData: ExerciseData[] = [
     ),
     category: '6. Klasse',
   },
+  {
+    id: 5,
+    title: 'Prozentrechnung',
+    text: (
+      <>
+        <p>
+          Die Mathe-Lehrerin kommt nach einer Schulaufgabe frustriert in die
+          Klasse und sagt: 75% der Klasse kann nicht Prozentrechnen!
+        </p>
+        <p>
+          Darauf hin meldet sich Luca und fragt: Aber wir sind gar nicht 75
+          Personen in der Klasse?
+        </p>
+        <p>
+          Die Lehrerin verlässt darauf verzweifelt das Klassenzimmer. Welchen
+          Fehler hat Luca gemacht?
+        </p>
+      </>
+    ),
+    words: [
+      'Luca',
+      'hat',
+      'Prozentsatz',
+      'und',
+      'Grundwert',
+      'verwechselt',
+      'Prozentwert',
+    ],
+    solutions: [
+      'Luca hat Prozentsatz und Grundwert verwechselt',
+      'Luca hat Grundwert und Prozentsatz verwechselt',
+    ],
+    category: 'Spaß & Co.',
+  },
 ]
