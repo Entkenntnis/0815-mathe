@@ -69,6 +69,31 @@ export const exercisesData: ExerciseData[] = [
     category: '6. Klasse',
   },
   {
+    id: 6,
+    title: 'Rechenfehler',
+    text: (
+      <>
+        <p>
+          An der Tafel steht folgende <i>falsche</i> Rechnung: 4 + 6 * 3 = 30
+        </p>
+        <p>
+          Das richtige Ergebnis lautet 22. Welcher Fehler wurde hier gemacht?
+        </p>
+      </>
+    ),
+    words: [
+      'Punkt',
+      'vor',
+      'Strich',
+      'wurde',
+      'nicht',
+      'beachtet',
+      'Klammerregel',
+    ],
+    solutions: ['Punkt vor Strich wurde nicht beachtet'],
+    category: '6. Klasse',
+  },
+  {
     id: 4,
     title: 'Schaltjahre',
     text: (
