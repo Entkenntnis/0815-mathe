@@ -18,7 +18,9 @@ export function Exercise({ onClose, id }: ExerciseProps) {
 
   const [selected, setSelected] = useState<string[]>([])
 
-  const [state, setState] = useState<'input' | 'right' | 'wrong'>('input')
+  const [state, setState] = useState<'input' | 'right' | 'wrong' | 'partial'>(
+    'input'
+  )
 
   const [submittedText, setSubmittedText] = useState('')
 
@@ -52,11 +54,25 @@ export function Exercise({ onClose, id }: ExerciseProps) {
             <div
               className={clsx(
                 'mx-3 my-3',
-                state == 'right' ? 'text-green-600' : 'text-red-600'
+                state == 'right'
+                  ? 'text-green-600'
+                  : state == 'wrong'
+                  ? 'text-red-600'
+                  : 'text-yellow-700'
               )}
             >
-              &quot;{submittedText}&quot; ist{' '}
-              {state == 'right' ? 'richtig' : 'falsch'}
+              {state == 'partial' ? (
+                <>
+                  &quot;{submittedText}&quot; ist teilweise richtig,
+                  vervollständige den Satz
+                </>
+              ) : (
+                <>
+                  {' '}
+                  &quot;{submittedText}&quot; ist{' '}
+                  {state == 'right' ? 'richtig' : 'falsch'}
+                </>
+              )}
             </div>
           )}
           {state !== 'right' && (
@@ -125,7 +141,14 @@ export function Exercise({ onClose, id }: ExerciseProps) {
                   if (data.solutions.includes(sentence)) {
                     setState('right')
                   } else {
-                    setState('wrong')
+                    if (
+                      selected.length > 1 &&
+                      data.solutions.some((sol) => sol.includes(sentence))
+                    ) {
+                      setState('partial')
+                    } else {
+                      setState('wrong')
+                    }
                   }
                 }}
               >
