@@ -136,8 +136,8 @@ export function Exercise({ onClose, id }: ExerciseProps) {
                     return
                   }
 
-                  const sentence = selected.join(' ')
-                  setSubmittedText(sentence + '.')
+                  const sentence = selected.map((x) => x.trim()).join(' ')
+                  setSubmittedText(sentence + (data.noDot ? '' : '.'))
                   if (data.solutions.includes(sentence)) {
                     setState('right')
                   } else {

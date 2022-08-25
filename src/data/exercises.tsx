@@ -5,6 +5,7 @@ export interface ExerciseData {
   solutions: string[]
   text: JSX.Element
   category: '6. Klasse' | 'Spaß & Co.'
+  noDot?: boolean
 }
 
 export const exercisesData: ExerciseData[] = [
@@ -252,7 +253,7 @@ export const exercisesData: ExerciseData[] = [
         <img
           src="/field-gb105ad373_640.png"
           className="h-[250px]"
-          alt="schiefes Parallelogramm"
+          alt="Fußballfeld"
         />
         <p>
           Begründe oder widerlege: Ein Fußballfeld hat die Form eines
@@ -289,6 +290,31 @@ export const exercisesData: ExerciseData[] = [
       'Ja, gegenüberliegenden Seiten des Fußballfelds sind gleich lang und parallel',
       'Ja, gegenüberliegenden Seiten des Fußballfelds sind parallel und gleich lang',
     ],
+    category: '6. Klasse',
+  },
+  {
+    id: 9,
+    title: 'Subtrahieren rationaler Zahlen',
+    text: (
+      <>
+        <p>
+          Eine rationale Zahl wird subtrahiert, indem man ihre Gegenzahl
+          addiert.
+        </p>
+        <p>Schreibe folgende Differenz nach obiger Regel als Summe:</p>
+        <p className="text-xl">(+ 4,5) - (- 2,3) = </p>
+      </>
+    ),
+    words: ['4,5', '2,3', '+', '(', ')', '-', '+ '],
+    solutions: [
+      '4,5 + 2,3',
+      '2,3 + 4,5',
+      '+ 4,5 + 2,3',
+      '( + 4,5 ) + 2,3',
+      '2,3 + ( + 4,5 )',
+      '+ 2,3 + 4,5',
+    ],
+    noDot: true,
     category: '6. Klasse',
   },
   //{ id: -1, title: '', text: <></>, words: [], solutions: [], category: '' },
