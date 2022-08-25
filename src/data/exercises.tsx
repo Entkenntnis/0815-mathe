@@ -203,4 +203,93 @@ export const exercisesData: ExerciseData[] = [
     ],
     category: 'Spaß & Co.',
   },
+  {
+    id: 7,
+    title: 'Gleichnamige Brüche addieren',
+    text: (
+      <>
+        <p>
+          Brüche, die gleiche Nenner besitzen, heißen gleichnamig. Solche Brüche
+          können wie folgt addiert werden:
+        </p>
+        <img
+          src="/additionbruchgleichnamig.png"
+          className="h-[200px]"
+          alt="1/4 + 2/4 = (1+2)/4 = 3/4 und 5/7 + 1/7 = (5+1)/7 = 6/7"
+        />
+        <p>Nach welcher Regel wurden diese Brüche addiert?</p>
+        <p>Gleichnamige Brüche werden addiert, indem …</p>
+      </>
+    ),
+    words: [
+      'man',
+      'ihre',
+      'Zähler',
+      'addiert',
+      'und',
+      'den',
+      'gemeinsamen',
+      'Nenner',
+      'beibehält',
+    ],
+    solutions: [
+      'man ihre Zähler addiert und den gemeinsamen Nenner beibehält',
+      'man den gemeinsamen Nenner beibehält und ihre Zähler addiert',
+      'man den Zähler addiert und ihre gemeinsamen Nenner beibehält',
+      'man ihre gemeinsamen Nenner beibehält und den Zähler addiert',
+    ],
+    category: '6. Klasse',
+  },
+  {
+    id: 8,
+    title: 'Parallelogramm',
+    text: (
+      <>
+        <p>
+          Ein Parallelogramm ist ein Viereck, bei dem gegenüberliegende Seiten
+          parallel und gleich lang sind.
+        </p>
+        <img
+          src="/field-gb105ad373_640.png"
+          className="h-[250px]"
+          alt="schiefes Parallelogramm"
+        />
+        <p>
+          Begründe oder widerlege: Ein Fußballfeld hat die Form eines
+          Parallelogramms.
+        </p>
+      </>
+    ),
+    words: [
+      'Ja,',
+      'die',
+      'gegenüberliegenden',
+      'Seiten',
+      'des',
+      'Fußballfelds',
+      'sind',
+      'parallel',
+      'und',
+      'gleich',
+      'lang',
+      'Nein,',
+      'das',
+      'Fußballfeld',
+      'ist',
+      'ein',
+      'Rechteck',
+    ],
+    solutions: [
+      'Ja, die gegenüberliegenden Seiten des Fußballfelds sind gleich lang und parallel',
+      'Ja, die gegenüberliegenden Seiten des Fußballfelds sind parallel und gleich lang',
+      'Ja, gegenüberliegenden Seiten sind gleich lang und parallel',
+      'Ja, gegenüberliegenden Seiten sind parallel und gleich lang',
+      'Ja, die gegenüberliegenden Seiten sind gleich lang und parallel',
+      'Ja, die gegenüberliegenden Seiten sind parallel und gleich lang',
+      'Ja, gegenüberliegenden Seiten des Fußballfelds sind gleich lang und parallel',
+      'Ja, gegenüberliegenden Seiten des Fußballfelds sind parallel und gleich lang',
+    ],
+    category: '6. Klasse',
+  },
+  //{ id: -1, title: '', text: <></>, words: [], solutions: [], category: '' },
 ]
