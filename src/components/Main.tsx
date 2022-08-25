@@ -42,27 +42,32 @@ export default function Main() {
     )
   }
 
+  function renderCategory(category: ExerciseData['category']) {
+    return (
+      <>
+        <h2 className="mx-3 mt-10 text-xl font-bold">{category}</h2>
+        {exercisesData
+          .filter((e) => e.category == category)
+          .map((exercise) => renderExercise(exercise))}
+      </>
+    )
+  }
+
   return (
     <>
       <Head>
         <title>Reasoning Exercises</title>
       </Head>
       <div>
-        <div className="max-w-[580px] mx-auto relative">
+        <div className="max-w-[580px] mx-auto relative mb-6">
           <h1 className="mt-10 mb-4 text-3xl font-bold mx-3">
             Reasoning Exercises
           </h1>
           <p className="mx-3">
             Verständnis-orientierte interaktive Mathematik-Aufgaben
           </p>
-          <h2 className="mx-3 mt-10 text-xl font-bold">6. Klasse</h2>
-          {exercisesData
-            .filter((e) => e.category == '6. Klasse')
-            .map((exercise) => renderExercise(exercise))}
-          <h2 className="mx-3 mt-10 text-xl font-bold">Spaß &amp; Co.</h2>
-          {exercisesData
-            .filter((e) => e.category == 'Spaß & Co.')
-            .map((exercise) => renderExercise(exercise))}
+          {renderCategory('6. Klasse')}
+          {renderCategory('Spaß & Co.')}
         </div>
       </div>
     </>
