@@ -65,7 +65,10 @@ export const exercisesData: ExerciseData[] = [
       'Zahl',
       '2',
     ],
-    solutions: ['die letzte Ziffer 0 oder 5 ist'],
+    solutions: [
+      'die letzte Ziffer 0 oder 5 ist',
+      'die letzte Ziffer 5 oder 0 ist',
+    ],
     category: '6. Klasse',
   },
   {
@@ -90,7 +93,10 @@ export const exercisesData: ExerciseData[] = [
       'beachtet',
       'Klammerregel',
     ],
-    solutions: ['Punkt vor Strich wurde nicht beachtet'],
+    solutions: [
+      'Punkt vor Strich wurde nicht beachtet',
+      'Punkt vor Strich nicht beachtet',
+    ],
     category: '6. Klasse',
   },
   {
