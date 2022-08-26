@@ -305,7 +305,7 @@ export const exercisesData: ExerciseData[] = [
         <p className="text-xl">(+ 4,5) - (- 2,3) = </p>
       </>
     ),
-    words: ['4,5', '2,3', '+', '(', ')', '-', '+ '],
+    words: ['4,5', '2,3', '+', '(', ')', '-', '+'],
     solutions: [
       '4,5 + 2,3',
       '2,3 + 4,5',
@@ -317,5 +317,5 @@ export const exercisesData: ExerciseData[] = [
     noDot: true,
     category: '6. Klasse',
   },
-  //{ id: -1, title: '', text: <></>, words: [], solutions: [], category: '' },
+  // { id: -1, title: '', text: <></>, words: [], solutions: [], category: '' },
 ]

@@ -1,7 +1,7 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { FaIcon } from '../components/FaIcon'
 import { exercisesData } from '../data/exercises'
@@ -13,7 +13,20 @@ interface ExerciseProps {
 }
 
 export function Exercise({ onClose, id }: ExerciseProps) {
-  const data = exercisesData.find((x) => x.id == id)
+  const data = useMemo(() => exercisesData.find((x) => x.id == id), [id])
+
+  const choices = useMemo(() => {
+    const output = []
+    data.words.forEach((word) => {
+      let t = word
+      while (output.includes(t)) {
+        t = t + ' '
+      }
+      output.push(t)
+    })
+    return output
+  }, [data])
+
   const [wordRack, setWordRack] = useState<string[]>([])
 
   const [selected, setSelected] = useState<string[]>([])
@@ -25,8 +38,8 @@ export function Exercise({ onClose, id }: ExerciseProps) {
   const [submittedText, setSubmittedText] = useState('')
 
   useEffect(() => {
-    setWordRack(shuffleArray(data.words))
-  }, [data])
+    setWordRack(shuffleArray(choices))
+  }, [choices])
   return (
     <>
       <Head>
@@ -94,7 +107,7 @@ export function Exercise({ onClose, id }: ExerciseProps) {
                       setSelected((val) => val.filter((x) => x !== word))
                     }}
                   >
-                    {word}
+                    {word.trim()}
                   </span>
                 ))}
               </div>
@@ -114,7 +127,7 @@ export function Exercise({ onClose, id }: ExerciseProps) {
                       setSelected((val) => [...val, word])
                     }}
                   >
-                    {word}
+                    {word.trim()}
                   </span>
                 ))}
               </div>
@@ -136,13 +149,13 @@ export function Exercise({ onClose, id }: ExerciseProps) {
                     return
                   }
 
-                  const sentence = selected.map((x) => x.trim()).join(' ')
+                  const sentence = selected.join(' ')
                   setSubmittedText(sentence + (data.noDot ? '' : '.'))
                   if (data.solutions.includes(sentence)) {
                     setState('right')
                   } else {
                     if (
-                      selected.length > 1 &&
+                      selected.length > 0 &&
                       data.solutions.some((sol) => sol.includes(sentence))
                     ) {
                       setState('partial')
