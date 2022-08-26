@@ -10,36 +10,6 @@ export interface ExerciseData {
 
 export const exercisesData: ExerciseData[] = [
   {
-    id: 1,
-    title: 'Busfahrt',
-    words: [
-      'Die',
-      'Busfahrerin',
-      'ist',
-      '32',
-      'Jahre',
-      'alt',
-      '18',
-      'Im',
-      'Bus',
-      'befinden',
-      'sich',
-      'Personen',
-      '42',
-    ],
-    solutions: ['Die Busfahrerin ist 32 Jahre alt'],
-    text: (
-      <>
-        <p>
-          Ein 32-jährige Busfahrerin startet mit einem leeren Bus. An der ersten
-          Haltestelle steigen 30 Personen ein, an der zweiten Haltestelle
-          steigen 12 Personen aus. Wie alt ist die Busfahrerin?
-        </p>
-      </>
-    ),
-    category: 'Spaß & Co.',
-  },
-  {
     id: 3,
     title: 'Endstellenregel',
     text: (
@@ -316,6 +286,39 @@ export const exercisesData: ExerciseData[] = [
     ],
     noDot: true,
     category: '6. Klasse',
+  },
+  {
+    id: 1,
+    title: 'Busfahrt',
+    text: (
+      <>
+        <p>
+          Ein leerer Bus fährt los. An der ersten Haltestelle steigen 10
+          Personen ein, an der zweiten Haltestelle steigen 16 Personen aus. Was
+          sagt der Mathematiker?
+        </p>
+      </>
+    ),
+    words: [
+      'Wenn',
+      'noch',
+      '6',
+      'Personen',
+      'einsteigen',
+      'dann',
+      'ist',
+      'der',
+      'Bus',
+      'leer',
+    ],
+    solutions: [
+      'Wenn noch 6 Personen einsteigen dann ist der Bus leer',
+      'Wenn 6 Personen einsteigen dann ist der Bus leer',
+      'Wenn noch 6 Personen einsteigen ist der Bus leer',
+      'Der Bus ist leer Wenn noch 6 Personen einsteigen',
+      'Der Bus ist leer Wenn 6 Personen einsteigen',
+    ],
+    category: 'Spaß & Co.',
   },
   // { id: -1, title: '', text: <></>, words: [], solutions: [], category: '' },
 ]
