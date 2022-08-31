@@ -217,47 +217,33 @@ export const exercisesData: ExerciseData[] = [
       <>
         <p>
           Ein Parallelogramm ist ein Viereck, bei dem gegenüberliegende Seiten
-          parallel und gleich lang sind.
+          parallel und gleich lang sind. Meistens stellt man sich ein
+          Parallelogramm so vor:
+        </p>
+        <img
+          src="/parallelogramm.png"
+          className="h-[90px]"
+          alt="Parallelogramm"
+        />
+        <p>
+          Was viele aber überrascht ist, dass auch ein Fußballfeld ein
+          Parallelogramm ist. Das kann man mit der Definition begründen:
         </p>
         <img
           src="/field-gb105ad373_640.png"
-          className="h-[250px]"
+          className="h-[150px]"
           alt="Fußballfeld"
         />
         <p>
-          Begründe oder widerlege: Ein Fußballfeld hat die Form eines
-          Parallelogramms.
+          Ein Fußballfeld ist ein Parallelogramm, weil seine gegenüberliegenden
+          Seiten …
         </p>
       </>
     ),
-    words: [
-      'Ja,',
-      'die',
-      'gegenüberliegenden',
-      'Seiten',
-      'des',
-      'Fußballfelds',
-      'sind',
-      'parallel',
-      'und',
-      'gleich',
-      'lang',
-      'Nein,',
-      'das',
-      'Fußballfeld',
-      'ist',
-      'ein',
-      'Rechteck',
-    ],
+    words: ['parallel', 'und', 'gleich', 'lang', 'sind'],
     solutions: [
-      'Ja, die gegenüberliegenden Seiten des Fußballfelds sind gleich lang und parallel',
-      'Ja, die gegenüberliegenden Seiten des Fußballfelds sind parallel und gleich lang',
-      'Ja, gegenüberliegenden Seiten sind gleich lang und parallel',
-      'Ja, gegenüberliegenden Seiten sind parallel und gleich lang',
-      'Ja, die gegenüberliegenden Seiten sind gleich lang und parallel',
-      'Ja, die gegenüberliegenden Seiten sind parallel und gleich lang',
-      'Ja, gegenüberliegenden Seiten des Fußballfelds sind gleich lang und parallel',
-      'Ja, gegenüberliegenden Seiten des Fußballfelds sind parallel und gleich lang',
+      'parallel und gleich lang sind',
+      'gleich lang und parallel sind',
     ],
     category: '6. Klasse',
   },
