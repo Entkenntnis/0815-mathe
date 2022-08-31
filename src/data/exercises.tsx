@@ -125,6 +125,10 @@ export const exercisesData: ExerciseData[] = [
       'Muster B enthält kein blau',
       'Muster C enthält keine Fünfecke',
       'Muster D enthält Lücken',
+      'A enthält kein gelb',
+      'B enthält kein blau',
+      'C enthält keine Fünfecke',
+      'D enthält Lücken',
     ],
     text: (
       <>
