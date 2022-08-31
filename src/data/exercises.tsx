@@ -210,57 +210,7 @@ export const exercisesData: ExerciseData[] = [
     ],
     category: '6. Klasse',
   },
-  {
-    id: 8,
-    title: 'Parallelogramm',
-    text: (
-      <>
-        <p>
-          Ein Parallelogramm ist ein Viereck, bei dem gegenüberliegende Seiten
-          parallel und gleich lang sind.
-        </p>
-        <img
-          src="/field-gb105ad373_640.png"
-          className="h-[250px]"
-          alt="Fußballfeld"
-        />
-        <p>
-          Begründe oder widerlege: Ein Fußballfeld hat die Form eines
-          Parallelogramms.
-        </p>
-      </>
-    ),
-    words: [
-      'Ja,',
-      'die',
-      'gegenüberliegenden',
-      'Seiten',
-      'des',
-      'Fußballfelds',
-      'sind',
-      'parallel',
-      'und',
-      'gleich',
-      'lang',
-      'Nein,',
-      'das',
-      'Fußballfeld',
-      'ist',
-      'ein',
-      'Rechteck',
-    ],
-    solutions: [
-      'Ja, die gegenüberliegenden Seiten des Fußballfelds sind gleich lang und parallel',
-      'Ja, die gegenüberliegenden Seiten des Fußballfelds sind parallel und gleich lang',
-      'Ja, gegenüberliegenden Seiten sind gleich lang und parallel',
-      'Ja, gegenüberliegenden Seiten sind parallel und gleich lang',
-      'Ja, die gegenüberliegenden Seiten sind gleich lang und parallel',
-      'Ja, die gegenüberliegenden Seiten sind parallel und gleich lang',
-      'Ja, gegenüberliegenden Seiten des Fußballfelds sind gleich lang und parallel',
-      'Ja, gegenüberliegenden Seiten des Fußballfelds sind parallel und gleich lang',
-    ],
-    category: '6. Klasse',
-  },
+  // id: 8
   {
     id: 9,
     title: 'Subtrahieren rationaler Zahlen',
