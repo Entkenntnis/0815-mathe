@@ -235,8 +235,8 @@ export const exercisesData: ExerciseData[] = [
           alt="Fußballfeld"
         />
         <p>
-          Ein Fußballfeld ist ein Parallelogramm, weil seine gegenüberliegenden
-          Seiten …
+          Ein Fußballfeld ist ein Parallelogramm, weil es ein Viereck ist,
+          dessen gegenüberliegenden Seiten …
         </p>
       </>
     ),
