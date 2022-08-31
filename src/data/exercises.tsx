@@ -14,14 +14,13 @@ export const exercisesData: ExerciseData[] = [
     title: 'Endstellenregel',
     text: (
       <>
-        <p>
-          Die Zahlen 15, 300, 6125, 71035 und 10000 sind alle durch 5 teilbar.
-        </p>
+        <p>Die Zahlen 15, 300, 6125, 71035 und 10000 sind durch 5 teilbar.</p>
+        <p>Die Zahlen 13, 34, 67, 58 sind nicht durch 5 teilbar.</p>
         <p>
           Man kann diese Eigenschaft bereits an der letzten Stelle der Zahl
-          ablesen. Wie lautet die Regel, ob eine Zahl durch 5 teilbar ist?
+          ablesen. Wie lautet die Regel, ob eine Zahl genau durch 5 teilbar ist?
         </p>
-        <p>Eine Zahl ist durch 5 teilbar, wenn …</p>
+        <p>Eine Zahl ist genau durch 5 teilbar, wenn …</p>
       </>
     ),
     words: [
