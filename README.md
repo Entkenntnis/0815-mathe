@@ -2,4 +2,4 @@
 
 Verständnis-orientierte interaktive Mathematik-Aufgaben
 
-https://mathe.arrrg.de/
+https://reasoning.arrrg.de/
